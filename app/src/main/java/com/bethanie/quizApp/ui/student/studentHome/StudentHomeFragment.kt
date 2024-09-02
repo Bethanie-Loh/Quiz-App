@@ -103,7 +103,6 @@ class StudentHomeFragment : BaseFragment<FragmentStudentHomeBinding>() {
             ArrayAdapter(requireContext(), R.layout.layout_subject_dropdown_item, subjectsArray)
         binding?.quizList?.autoCompleteTextView?.setAdapter(arrayAdapter)
         clickingAutoComplete(subjectsArray)
-
     }
 
     private fun clickingAutoComplete(subjectsArray: Array<String>) {

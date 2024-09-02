@@ -90,7 +90,7 @@ class TeacherHomeFragment : BaseFragment<FragmentTeacherHomeBinding>() {
         }
 
         lifecycleScope.launch {
-            viewModel.attemptedQuizzes.collect {
+            viewModel.attemptedQuizzes.collect { it ->
                 attemptedQuizAdapter.setQuizzes(it)
                 quizList = it
                 subjects = it.map { it.subject }
