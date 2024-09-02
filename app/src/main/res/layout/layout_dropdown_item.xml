@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvDropDown"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fontFamily="@font/bold_redhatdisplay"
+    android:padding="@dimen/sixteen_dp"
+    android:text="Text View"
+    android:textColor="@color/black"
+    android:textSize="@dimen/eighteen_sp" />

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lavenderbg_with_border"
+        android:padding="@dimen/fourteen_dp">
+
+        <TextView
+            android:id="@+id/tvPastQuizzes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:text="@string/attempted_quizzes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="115dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_box_subject"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:inputType="none"
+                android:padding="@dimen/zero_dp"
+                android:text="Filter"
+                android:textSize="@dimen/twelve_sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAttemptedQuizzes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/forty_dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyAttemptedQuizzes"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/mediumitalic_redhatdisplay"
+            android:gravity="center"
+            android:text="Your have not attempted any quizzes yet. \nGet a quiz Id from your teacher today!"
+            android:textSize="@dimen/fourteen_sp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

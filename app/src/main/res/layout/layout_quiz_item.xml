@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardQuizItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/eight_dp"
+        app:cardCornerRadius="@dimen/ten_dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/two_dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlCardQuizItem"
+            android:background="@color/yellow"
+            android:padding="@dimen/fourteen_dp">
+
+            <TextView
+                android:id="@+id/tvFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <TextView
+                android:id="@+id/tvThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:layout_toStartOf="@id/ibCopy"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Copy Quiz ID"
+                android:textSize="@dimen/ten_sp" />
+
+            <ImageButton
+                android:id="@+id/ibCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_copy" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

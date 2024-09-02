@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardQuizItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/ten_dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/two_dp">
+
+        <RelativeLayout
+            android:id="@+id/rlCardQuizItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:padding="@dimen/fourteen_dp">
+
+            <TextView
+                android:id="@+id/tvFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="English"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <TextView
+                android:id="@+id/tvSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tvFirst"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="(You)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <TextView
+                android:id="@+id/tvThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Score: 16/20"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

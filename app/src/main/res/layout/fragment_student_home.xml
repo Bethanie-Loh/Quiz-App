@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.student.studentHome.StudentHomeFragment">
+
+        <include
+            android:id="@+id/navbar"
+            layout="@layout/navbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sky"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/thirty_dp">
+
+            <TextView
+                android:id="@+id/tvRandomiseQuizId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twenty_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="@string/paste_your_quiz_id_here"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_sp" />
+
+            <EditText
+                android:id="@+id/etQuizId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_box_outline"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:gravity="center"
+                android:hint="@string/paste_here"
+                android:inputType="number"
+                android:maxLength="6"
+                android:minWidth="200dp"
+                android:padding="@dimen/sixteen_dp"
+                android:textSize="@dimen/twenty_four_sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:minWidth="180dp"
+                android:text="@string/start_now"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                app:backgroundTint="@color/coral"
+                app:cornerRadius="@dimen/twenty_five_dp" />
+
+            <include
+                android:id="@+id/quizList"
+                layout="@layout/layout_rvattemptedquizzes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifty_dp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

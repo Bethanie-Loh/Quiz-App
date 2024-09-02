@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bethanie.quizApp.ui.login_signup.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/login_to_signUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/login_to_teacherHome"
+            app:destination="@id/teacherHomeFragment" />
+        <action
+            android:id="@+id/login_to_studentHome"
+            app:destination="@id/studentHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.bethanie.quizApp.ui.login_signup.signUp.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/signUp_to_teacherHome"
+            app:destination="@id/teacherHomeFragment" />
+        <action
+            android:id="@+id/signUp_to_studentHome"
+            app:destination="@id/studentHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/teacherHomeFragment"
+        android:name="com.bethanie.quizApp.ui.teacher.teacherHome.TeacherHomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_teacher_home">
+        <action
+            android:id="@+id/teacherHome_to_createQuiz"
+            app:destination="@id/createQuizFragment" />
+        <action
+            android:id="@+id/teacherHome_to_quizDetails"
+            app:destination="@id/quizDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createQuizFragment"
+        android:name="com.bethanie.quizApp.ui.teacher.createQuiz.CreateQuizFragment"
+        android:label="CreateQuizFragment"
+        tools:layout="@layout/fragment_create_quiz">
+        <action
+            android:id="@+id/createQuiz_to_teacherHome"
+            app:destination="@id/teacherHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentHomeFragment"
+        android:name="com.bethanie.quizApp.ui.student.studentHome.StudentHomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_student_home">
+        <action
+            android:id="@+id/studentHome_to_viewQuiz"
+            app:destination="@id/viewQuizFragment" />
+        <action
+            android:id="@+id/studentHome_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.bethanie.quizApp.ui.student.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/result_to_studentHome"
+            app:destination="@id/studentHomeFragment" />
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+        <argument
+            android:name="firstTime"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/result_to_mistakes"
+            app:destination="@id/mistakesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewQuizFragment"
+        android:name="com.bethanie.quizApp.ui.student.viewQuestion.QuestionFragment"
+        android:label="fragment_view_quiz"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/viewQuiz_to_result"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizDetailsFragment"
+        android:name="com.bethanie.quizApp.ui.teacher.quizDetails.QuizDetailsFragment"
+        android:label="fragment_quiz_details"
+        tools:layout="@layout/fragment_quiz_details">
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mistakesFragment"
+        android:name="com.bethanie.quizApp.ui.student.result.MistakesFragment"
+        android:label="MistakesFragment">
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+        <action
+            android:id="@+id/mistakes_to_studentHome"
+            app:destination="@id/studentHomeFragment" />
+    </fragment>
+</navigation>

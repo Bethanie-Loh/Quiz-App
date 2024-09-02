@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/twenty_dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/two_dp">
+
+        <LinearLayout
+            android:id="@+id/llResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/twenty_dp"
+            android:paddingVertical="@dimen/thirty_dp">
+
+            <TextView
+                android:id="@+id/tvResultMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/eighteen_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:gravity="center"
+                android:text="@string/congrats"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_two_sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

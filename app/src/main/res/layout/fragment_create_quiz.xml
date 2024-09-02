@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/navbar"
+            layout="@layout/navbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sky"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/thirty_dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sixteen_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Your Random Quiz ID: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvRandomQuizId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yellowbg_with_border"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:gravity="center"
+                android:minWidth="150dp"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/_310076"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_four_sp" />
+
+            <TextView
+                android:id="@+id/tvImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Step 1: Import CSV"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnImportCSV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:minWidth="220dp"
+                android:padding="@dimen/ten_dp"
+                android:text="Import CSV"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp"
+                app:backgroundTint="@color/green"
+                app:cornerRadius="@dimen/ten_dp"
+                app:icon="@drawable/ic_file_upload"
+                app:iconTint="@color/black"
+                app:strokeColor="@color/black"
+                app:strokeWidth="@dimen/two_dp" />
+
+            <TextView
+                android:id="@+id/tvQuizTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Step 2: Enter Quiz Title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <EditText
+                android:id="@+id/etQuizTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:hint="Quiz Title"
+                android:padding="@dimen/sixteen_dp"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvQuizSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Step 3: Select Subject"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_box"
+                    android:fontFamily="@font/bold_redhatdisplay"
+                    android:inputType="none"
+                    android:padding="@dimen/sixteen_dp"
+                    android:text="Quiz Subject"
+                    android:textSize="@dimen/eighteen_sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPublishQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/twenty_four_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:minWidth="180dp"
+                android:text="@string/publish_quiz"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp"
+                app:backgroundTint="@color/coral"
+                app:cornerRadius="@dimen/twenty_five_dp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

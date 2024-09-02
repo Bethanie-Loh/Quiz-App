@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/beige"
+        android:gravity="center"
+        android:padding="@dimen/thirty_dp"
+        tools:context=".ui.login_signup.signUp.SignUpFragment">
+
+        <TextView
+            android:id="@+id/tvLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/blackitalic_redhatdisplay"
+            android:text="@string/quizzy"
+            android:textColor="@color/coral"
+            android:textSize="@dimen/forty_five_sp" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/thirty_sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/twenty_four_dp"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:hint="Name"
+                android:padding="@dimen/sixteen_dp"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etName"
+                android:layout_marginBottom="@dimen/twenty_four_dp"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:hint="@string/email"
+                android:padding="@dimen/sixteen_dp"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <EditText
+                android:id="@+id/etUserId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEmail"
+                android:layout_marginBottom="@dimen/twenty_four_dp"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:hint="Student Id/ Staff Id"
+                android:padding="@dimen/sixteen_dp"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/llcbs"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/etEmail"-->
+            <!--                android:layout_marginVertical="@dimen/ten_dp"-->
+            <!--                android:paddingHorizontal="@dimen/twenty_dp">-->
+
+            <!--                <com.google.android.material.checkbox.MaterialCheckBox-->
+            <!--                    android:id="@+id/cbStudent"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:fontFamily="@font/bold_redhatdisplay"-->
+            <!--                    android:text="Student"-->
+            <!--                    android:textSize="@dimen/eighteen_sp" />-->
+
+            <!--                <com.google.android.material.checkbox.MaterialCheckBox-->
+            <!--                    android:id="@+id/cbTeacher"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentRight="true"-->
+            <!--                    android:fontFamily="@font/bold_redhatdisplay"-->
+            <!--                    android:text="Teacher"-->
+            <!--                    android:textSize="@dimen/eighteen_sp" />-->
+            <!--            </RelativeLayout>-->
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etUserId"
+                android:layout_marginBottom="@dimen/twenty_four_dp"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="@dimen/sixteen_dp"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="@dimen/sixteen_dp"
+                android:textSize="@dimen/eighteen_sp" />
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:minWidth="180dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp"
+            app:backgroundTint="@color/coral"
+            app:cornerRadius="@dimen/twenty_five_dp" />
+
+    </RelativeLayout>
+</layout>
+
+

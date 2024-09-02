@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llQuestions"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/twenty_dp"
+    android:background="@drawable/beigebg_with_border"
+    android:orientation="vertical"
+    android:padding="@dimen/twelve_dp">
+
+    <TextView
+        android:id="@+id/tvUnanswered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:fontFamily="@font/mediumitalic_redhatdisplay"
+        android:text="You did not answer this question...😞"
+        android:textColor="@color/rose"
+        android:textSize="@dimen/fourteen_sp" />
+
+    <TextView
+        android:id="@+id/tvQuesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/twenty_dp"
+        android:fontFamily="@font/bold_redhatdisplay"
+        android:text="12. The cytoskeleton is important because"
+        android:textColor="@color/black"
+        android:textSize="@dimen/eighteen_sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChoice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold_redhatdisplay"
+        android:padding="@dimen/twelve_dp"
+        android:text="A. It gives the cell its shape"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/eighteen_sp"
+        app:backgroundTint="@color/magnolia"
+        app:cornerRadius="@dimen/ten_dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChoice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold_redhatdisplay"
+        android:padding="@dimen/twelve_dp"
+        android:text="A. It gives the cell its shape"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/eighteen_sp"
+        app:backgroundTint="@color/magnolia"
+        app:cornerRadius="@dimen/ten_dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChoice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold_redhatdisplay"
+        android:padding="@dimen/twelve_dp"
+        android:text="A. It gives the cell its shape"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/eighteen_sp"
+        app:backgroundTint="@color/magnolia"
+        app:cornerRadius="@dimen/ten_dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChoice4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold_redhatdisplay"
+        android:padding="@dimen/twelve_dp"
+        android:text="A. It gives the cell its shape"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/eighteen_sp"
+        app:backgroundTint="@color/magnolia"
+        app:cornerRadius="@dimen/ten_dp" />
+</LinearLayout>

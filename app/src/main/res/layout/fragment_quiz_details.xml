@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sky"
+        android:orientation="vertical"
+        tools:context=".ui.teacher.quizDetails.QuizDetailsFragment">
+
+        <include
+            android:id="@+id/navbar"
+            layout="@layout/navbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/forty_dp"
+            android:layout_marginBottom="@dimen/sixteen_dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/thirty_dp">
+
+            <TextView
+                android:id="@+id/tvQuizTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Quiz Title: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvQuizSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Quiz Subject: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvQuizId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Quiz Id: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvTotalQues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Total questions: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Total time: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvDateCreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Date Created: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:text="Status: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/thirty_dp">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/clStudentRanks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lavenderbg_with_border"
+                android:padding="@dimen/fourteen_dp">
+
+                <TextView
+                    android:id="@+id/tvStudentRanks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold_redhatdisplay"
+                    android:text="@string/student_ranks"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twenty_sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvStudentRanks"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="@dimen/thirty_five_dp" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

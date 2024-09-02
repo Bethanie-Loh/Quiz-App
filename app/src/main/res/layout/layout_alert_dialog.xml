@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/twenty_dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/two_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            android:orientation="vertical"
+            android:padding="@dimen/thirty_dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/eighteen_dp"
+                android:fontFamily="@font/bold_redhatdisplay"
+                android:gravity="center"
+                android:text="Are you sure to logout?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_two_sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/thirty_dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/bold_redhatdisplay"
+                    android:text="Cancel"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/eighteen_sp"
+                    app:cornerRadius="@dimen/ten_dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/beige"
+                    android:fontFamily="@font/bold_redhatdisplay"
+                    android:text="Logout"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/eighteen_sp"
+                    app:cornerRadius="@dimen/ten_dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

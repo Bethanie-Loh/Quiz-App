@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sky">
+
+        <include
+            android:id="@+id/navbar"
+            layout="@layout/navbar" />
+
+        <LinearLayout
+            android:id="@+id/llScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/navbar"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/thirty_dp"
+            android:paddingHorizontal="@dimen/thirty_dp">
+
+            <TextView
+                android:id="@+id/tvGeorge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twenty_five_dp"
+                android:fontFamily="@font/mediumitalic_redhatdisplay"
+                android:gravity="center"
+                android:text="Those who forget history are doomed to repeat it 😌 ~ George Santayana"
+                android:textColor="@color/black"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMistakes"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@id/tvGeorge"
+                android:layout_marginTop="@dimen/twenty_dp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReturnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:minWidth="180dp"
+            android:text="Return Home"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp"
+            app:backgroundTint="@color/green"
+            app:cornerRadius="@dimen/twenty_five_dp" />
+    </RelativeLayout>
+</layout>

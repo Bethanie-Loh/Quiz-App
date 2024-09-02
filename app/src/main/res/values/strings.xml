@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quizzy">QUIZZY</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="email">Email</string>
+    <string name="publish_quiz">Publish Quiz</string>
+    <string name="emptyString"> </string>
+    <string-array name="subjects">
+        <item>Biology</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>History</item>
+    </string-array>
+
+    <string name="start_now">Start Now!</string>
+    <string name="attempted_quizzes">Attempted Quizzes</string>
+    <string name="teacherEmptyAttemptedQuizzes">Your students have not attempted any of your quizzes yet.</string>
+    <string name="_310076">310076</string>
+    <string name="student_ranks">Student Ranks</string>
+    <string name="total_ques">- %1$d Ques</string>
+    <string name="quiz_quizId">Quiz ID: %1$s</string>
+    <string name="quiz_title">Quiz Title: %1$s</string>
+    <string name="quiz_subject">Subject: %1$s</string>
+    <string name="quizTeacherName">Teacher Name: %1$s</string>
+    <string name="quiz_total_ques">Total questions: %1$s</string>
+    <string name="quiz_total_time">Total time: %1$s</string>
+    <string name="quiz_date_created">Date Created: %1$s</string>
+    <string name="quiz_status_false">Status: Not Attempted</string>
+    <string name="quiz_status_true">Status: Attempted</string>
+    <string name="formattedTimeWithMinsSecs">%1$d mins %2$d secs</string>
+    <string name="formattedTimeWithMinsOnly">%1$d mins</string>
+    <string name="formattedTimeWithSecsOnly">%1$d secs</string>
+    <string name="paste_your_quiz_id_here">Paste your Quiz Id here!</string>
+    <string name="paste_here">Paste here</string>
+    <string name="ques_title">Q%1$d. %2$s</string>
+    <string name="zero">0</string>
+    <string name="result">%1$d/%2$d</string>
+    <string name="firstPlace">%1$dst</string>
+    <string name="secondPlace">%1$dnd</string>
+    <string name="thirdPlace">%1$drd</string>
+    <string name="otherPlaces">%1$dth</string>
+    <string name="you">(You)</string>
+    <string name="dateAttempted">Date attempted: %1$s</string>
+    <string name="timeUsed">Time Used: %1$s</string>
+    <string name="quizDetails">Quiz Details</string>
+    <string name="resultPage">Result</string>
+    <string name="mistakes">Mistake(s)</string>
+    <string name="createQuiz">Create Quiz</string>
+    <string name="score">(%1$s)</string>
+    <string name="your_mistake_s">Your mistake(s)…🤐</string>
+    <string name="viewMistakes">View Your Mistakes</string>
+    <string name="comfort">Do not give up! \n💪Practice makes perfect!💪</string>
+    <string name="congrats">Congrats for getting full score! \n🥳Keep up the good job!🎉</string>
+</resources>

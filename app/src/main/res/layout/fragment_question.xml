@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sky"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/thirty_dp">
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/forty_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:text="9"
+            android:textColor="@color/black"
+            android:textSize="@dimen/seventy_sp" />
+
+        <TextView
+            android:id="@+id/tvQuesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:text="12. The cytoskeleton is important because"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChoice1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:padding="@dimen/twelve_dp"
+            android:text="A. It gives the cell its shape"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp"
+            app:backgroundTint="@color/purple"
+            app:cornerRadius="@dimen/ten_dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChoice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:padding="@dimen/twelve_dp"
+            android:text="A. It gives the cell its shape"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp"
+            app:backgroundTint="@color/purple"
+            app:cornerRadius="@dimen/ten_dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChoice3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:padding="@dimen/twelve_dp"
+            android:text="A. It gives the cell its shape"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp"
+            app:backgroundTint="@color/purple"
+            app:cornerRadius="@dimen/ten_dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChoice4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:fontFamily="@font/bold_redhatdisplay"
+            android:padding="@dimen/twelve_dp"
+            android:text="A. It gives the cell its shape"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen_sp"
+            app:backgroundTint="@color/purple"
+            app:cornerRadius="@dimen/ten_dp" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvChoice4"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="@dimen/twenty_dp"-->
+        <!--            android:background="@drawable/input_box"-->
+        <!--            android:backgroundTint="@color/purple"-->
+        <!--            android:fontFamily="@font/bold_redhatdisplay"-->
+        <!--            android:padding="@dimen/twelve_dp"-->
+        <!--            android:text="D. All of the above"-->
+        <!--            android:textSize="@dimen/eighteen_sp" />-->
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnNext"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/thirty_dp"-->
+        <!--            android:fontFamily="@font/bold_redhatdisplay"-->
+        <!--            android:minWidth="180dp"-->
+        <!--            android:text="Next"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="@dimen/eighteen_sp"-->
+        <!--            app:backgroundTint="@color/green"-->
+        <!--            app:cornerRadius="@dimen/twenty_five_dp"-->
+        <!--            app:icon="@drawable/ic_forward"-->
+        <!--            app:iconTint="@color/black" />-->
+    </LinearLayout>
+
+</layout>
