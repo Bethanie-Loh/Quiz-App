@@ -1,16 +1,14 @@
 package com.bethanie.quizApp.ui.student.result
 
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bethanie.quizApp.R
-import com.bethanie.quizApp.core.Constants
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.core.utils.DateTimeUtil
 import com.bethanie.quizApp.data.model.Student
 import com.bethanie.quizApp.databinding.FragmentResultBinding
@@ -57,7 +55,7 @@ class ResultFragment : BaseFragment<FragmentResultBinding>() {
     }
 
     private fun setupAdapter() {
-        adapter = ResultAdapter(sortedStudentsDesc, attemptedStudentId, requireContext())
+        adapter = ResultAdapter(sortedStudentsDesc, attemptedStudentId, ResourceProvider(requireContext()))
         binding?.rvAttemptedQuizzes?.adapter = adapter
         binding?.rvAttemptedQuizzes?.layoutManager = LinearLayoutManager(requireContext())
     }

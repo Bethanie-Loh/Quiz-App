@@ -1,6 +1,5 @@
 package com.bethanie.quizApp.ui.teacher.quizDetails
 
-import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
@@ -8,6 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Student
 import com.bethanie.quizApp.databinding.FragmentQuizDetailsBinding
 import com.bethanie.quizApp.ui.adapter.ResultAdapter
@@ -38,7 +38,7 @@ class QuizDetailsFragment : BaseFragment<FragmentQuizDetailsBinding>() {
     }
 
     private fun setupAdapter() {
-        adapter = ResultAdapter(sortedStudentsDesc, null.toString(), requireContext())
+        adapter = ResultAdapter(sortedStudentsDesc, null.toString(), ResourceProvider(requireContext()))
         binding?.rvStudentRanks?.adapter = adapter
         binding?.rvStudentRanks?.layoutManager = LinearLayoutManager(requireContext())
     }

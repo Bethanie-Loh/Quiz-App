@@ -1,6 +1,5 @@
 package com.bethanie.quizApp.ui.teacher.teacherHome
 
-import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.core.view.isVisible
@@ -9,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Quiz
 import com.bethanie.quizApp.databinding.FragmentTeacherHomeBinding
 import com.bethanie.quizApp.ui.adapter.QuizAdapter
@@ -60,7 +60,7 @@ class TeacherHomeFragment : BaseFragment<FragmentTeacherHomeBinding>() {
     }
 
     private fun setNewQuizAdapter() {
-        newQuizAdapter = QuizAdapter(emptyList(), requireContext())
+        newQuizAdapter = QuizAdapter(emptyList(), ResourceProvider(requireContext()))
         newQuizAdapter.listener = object : QuizAdapter.Listener {
             override fun onClick(quiz: Quiz) {
                 findNavController().navigate(
@@ -71,7 +71,7 @@ class TeacherHomeFragment : BaseFragment<FragmentTeacherHomeBinding>() {
     }
 
     private fun setAttemptedQuizAdapter() {
-        attemptedQuizAdapter = QuizAdapter(emptyList(), requireContext())
+        attemptedQuizAdapter = QuizAdapter(emptyList(), ResourceProvider(requireContext()))
         attemptedQuizAdapter.listener = object : QuizAdapter.Listener {
             override fun onClick(quiz: Quiz) {
                 findNavController().navigate(

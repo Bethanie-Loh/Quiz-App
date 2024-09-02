@@ -1,12 +1,12 @@
 package com.bethanie.quizApp.ui.student.result
 
 import android.view.View
-import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.databinding.FragmentMistakesBinding
 import com.bethanie.quizApp.ui.adapter.MistakeAdapter
 import com.bethanie.quizApp.ui.base.BaseFragment
@@ -44,7 +44,7 @@ class MistakesFragment : BaseFragment<FragmentMistakesBinding>() {
     }
 
     private fun setupAdapter() {
-        adapter = MistakeAdapter(emptyList(), requireContext())
+        adapter = MistakeAdapter(emptyList(), ResourceProvider(requireContext()))
         binding?.rvMistakes?.adapter = adapter
         binding?.rvMistakes?.layoutManager = LinearLayoutManager(requireContext())
     }

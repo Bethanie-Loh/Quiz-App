@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Quiz
 import com.bethanie.quizApp.databinding.FragmentStudentHomeBinding
 import com.bethanie.quizApp.ui.adapter.QuizAdapter
@@ -55,7 +56,7 @@ class StudentHomeFragment : BaseFragment<FragmentStudentHomeBinding>() {
 
 
     private fun setupAdapter() {
-        adapter = QuizAdapter(emptyList(), requireContext())
+        adapter = QuizAdapter(emptyList(), ResourceProvider(requireContext()))
         binding?.quizList?.rvAttemptedQuizzes?.adapter = adapter
         binding?.quizList?.rvAttemptedQuizzes?.layoutManager = LinearLayoutManager(requireContext())
 
