@@ -1,10 +1,8 @@
 package com.bethanie.quizApp.ui.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bethanie.quizApp.R
@@ -17,7 +15,6 @@ class MistakeAdapter(
     private var mistakes: List<Mistake>,
     private val resourceProvider: ResourceProvider
 ) : RecyclerView.Adapter<MistakeAdapter.MistakeViewHolder>() {
-    var listener: Listener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MistakeViewHolder {
         val binding =
@@ -88,9 +85,5 @@ class MistakeAdapter(
                 }
             }
         }
-    }
-
-    interface Listener {
-        fun onClick(mistake: Mistake)
     }
 }

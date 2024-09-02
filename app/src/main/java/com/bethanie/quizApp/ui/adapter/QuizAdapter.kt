@@ -1,26 +1,13 @@
 package com.bethanie.quizApp.ui.adapter
 
 import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getString
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bethanie.quizApp.R
 import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Quiz
 import com.bethanie.quizApp.databinding.LayoutQuizItemBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.launch
 
 class QuizAdapter(
     private var quiz: List<Quiz>,
