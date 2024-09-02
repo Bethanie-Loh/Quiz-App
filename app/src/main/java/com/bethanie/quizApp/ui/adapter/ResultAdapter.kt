@@ -1,22 +1,18 @@
 package com.bethanie.quizApp.ui.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Student
-import com.bethanie.quizApp.databinding.LayoutQuizItemBinding
 import com.bethanie.quizApp.databinding.LayoutStudentItemBinding
 
 class ResultAdapter(
     private var sortedStudents: List<Student>,
     private var attemptedStudentId: String,
-    var context: Context
+    private val resourceProvider: ResourceProvider
 ) : RecyclerView.Adapter<ResultAdapter.ResultViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResultViewHolder {
@@ -56,10 +52,7 @@ class ResultAdapter(
 
                 if (attemptedStudentId == sortedStudent.studentId) {
                     rlCardQuizItem.setBackgroundColor(
-                        ContextCompat.getColor(
-                            context,
-                            R.color.yellow
-                        )
+                        resourceProvider.getColor(R.color.yellow)
                     )
                 }
             }
@@ -68,19 +61,18 @@ class ResultAdapter(
 
     private fun showUserOrScore(sortedStudent: Student): String {
         return if (attemptedStudentId == sortedStudent.studentId) {
-            ContextCompat.getString(context, R.string.you)
-
+            resourceProvider.getString(R.string.you)
         } else {
-            String.format(ContextCompat.getString(context, R.string.score), sortedStudent.score)
+            resourceProvider.getString(R.string.score, sortedStudent.score)
         }
     }
 
     private fun assignStudentRanks(rank: Int): String {
         return when (rank) {
-            1 -> String.format(ContextCompat.getString(context, R.string.firstPlace), rank)
-            2 -> String.format(ContextCompat.getString(context, R.string.secondPlace), rank)
-            3 -> String.format(ContextCompat.getString(context, R.string.thirdPlace), rank)
-            else -> String.format(ContextCompat.getString(context, R.string.otherPlaces), rank)
+            1 -> resourceProvider.getString(R.string.firstPlace, rank)
+            2 -> resourceProvider.getString(R.string.secondPlace, rank)
+            3 -> resourceProvider.getString(R.string.thirdPlace, rank)
+            else -> resourceProvider.getString(R.string.otherPlaces, rank)
         }
     }
 }

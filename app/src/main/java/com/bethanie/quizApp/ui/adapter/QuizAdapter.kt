@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat.getString
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Quiz
 import com.bethanie.quizApp.databinding.LayoutQuizItemBinding
 import kotlinx.coroutines.CoroutineScope
@@ -23,7 +24,7 @@ import kotlinx.coroutines.launch
 
 class QuizAdapter(
     private var quiz: List<Quiz>,
-    private val context: Context
+    private val resourceProvider: ResourceProvider
 ) : RecyclerView.Adapter<QuizAdapter.QuizViewHolder>() {
     var listener: Listener? = null
     private var onCopyClick: ((String) -> Unit)? = null
@@ -58,18 +59,16 @@ class QuizAdapter(
                 cardQuizItem.setOnClickListener { listener?.onClick(quiz) }
 
                 if (quiz.status) {
-                    rlCardQuizItem.setBackgroundColor(ContextCompat.getColor(context, R.color.purple))
+                    rlCardQuizItem.setBackgroundColor(
+                        resourceProvider.getColor(R.color.purple)
+                    )
                 }
             }
         }
     }
 
     private fun copyQuizId(quiz: Quiz) {
-        val clipboardManager =
-            context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clip = ClipData.newPlainText("CLIPBOARD_LABEL", quiz.quizId)
-        clipboardManager.setPrimaryClip(clip)
-
+        resourceProvider.copyToClipboard("CLIPBOARD_LABEL", quiz.quizId)
         onCopyClick?.invoke(quiz.quizId)
     }
 

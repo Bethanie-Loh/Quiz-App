@@ -64,5 +64,4 @@ class QuizRepo(
             getQuizCollRef().document(it).set(quiz).await()
         }
     }
-
 }

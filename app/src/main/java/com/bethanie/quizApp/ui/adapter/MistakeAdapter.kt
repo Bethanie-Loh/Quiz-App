@@ -9,12 +9,13 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bethanie.quizApp.R
 import com.bethanie.quizApp.core.Constants
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.data.model.Mistake
 import com.bethanie.quizApp.databinding.LayoutMistakeBinding
 
 class MistakeAdapter(
     private var mistakes: List<Mistake>,
-    private val context: Context
+    private val resourceProvider: ResourceProvider
 ) : RecyclerView.Adapter<MistakeAdapter.MistakeViewHolder>() {
     var listener: Listener? = null
 
@@ -43,8 +44,8 @@ class MistakeAdapter(
 
         fun bind(mistake: Mistake) {
             binding.run {
-                tvQuesTitle.text = String.format(
-                    ContextCompat.getString(context, R.string.ques_title),
+                tvQuesTitle.text = resourceProvider.getString(
+                    R.string.ques_title,
                     mistake.questionNumber,
                     mistake.title
                 )
@@ -67,7 +68,7 @@ class MistakeAdapter(
                     tvUnanswered.isVisible = true
 
                     correctChoiceButton?.backgroundTintList =
-                        ContextCompat.getColorStateList(context, R.color.coral)
+                        resourceProvider.getColorStateList(R.color.coral)
 
                 } else {
                     tvUnanswered.isVisible = false
@@ -75,12 +76,12 @@ class MistakeAdapter(
                         when (choice.text) {
                             mistake.chosenAnswer -> {
                                 choice.backgroundTintList =
-                                    ContextCompat.getColorStateList(context, R.color.coral)
+                                    resourceProvider.getColorStateList(R.color.coral)
                             }
 
                             mistake.correctAnswer -> {
                                 choice.backgroundTintList =
-                                    ContextCompat.getColorStateList(context, R.color.green)
+                                    resourceProvider.getColorStateList(R.color.green)
                             }
                         }
                     }
