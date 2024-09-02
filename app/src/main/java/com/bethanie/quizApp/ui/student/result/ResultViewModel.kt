@@ -1,11 +1,8 @@
 package com.bethanie.quizApp.ui.student.result
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
-import com.bethanie.quizApp.core.Constants
 import com.bethanie.quizApp.data.model.Mistake
-import com.bethanie.quizApp.data.model.Question
 import com.bethanie.quizApp.data.model.Quiz
 import com.bethanie.quizApp.data.model.Student
 import com.bethanie.quizApp.data.repo.QuizRepo
@@ -14,8 +11,6 @@ import com.bethanie.quizApp.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -49,8 +44,6 @@ class ResultViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            Log.d("debugging", "quiz.id: $quizId")
-
             quiz.value = quizRepo.getQuizById(quizId!!)
             success.emit(Unit)
         }
@@ -63,11 +56,6 @@ class ResultViewModel @Inject constructor(
     }
 
     private fun getQuizValue() {
-        Log.d("debugging", "getQuizValue() -> quiz.value.students: ${quiz.value?.students}")
-        Log.d(
-            "debugging",
-            "getQuizValue() -> quiz.value.students.size: ${quiz.value?.students?.size}"
-        )
         viewModelScope.launch {
             quiz.collect { quiz ->
                 quiz?.let {
@@ -98,9 +86,7 @@ class ResultViewModel @Inject constructor(
             ?: emptyList()
 
         _attemptedStudents.value = latestStudents
-        Log.d("debugging", "latestStudents: $latestStudents")
         val currentStudent = latestStudents.find { it.studentId == authService.getUid() }
-        Log.d("debugging", "currentStudent: $currentStudent")
         currentStudent?.let {
             _attemptedStudent.value = it
         }
@@ -137,7 +123,6 @@ class ResultViewModel @Inject constructor(
     private fun getStudentMistakes() {
         viewModelScope.launch {
             attemptedStudent.collect { student ->
-                Log.d("debugging", "ResultViewModel -> student.mistakes: ${student?.mistakes}")
                 student?.let { _mistakes.value = student.mistakes!! }
             }
         }

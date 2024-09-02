@@ -1,6 +1,5 @@
 package com.bethanie.quizApp.ui.student.viewQuestion
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.bethanie.quizApp.data.model.Question
@@ -38,7 +37,6 @@ class QuestionViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             getQuizByQuizId()
-            getQuestionsFromQuiz()  //delete this?
             getUserStudent()
         }
     }

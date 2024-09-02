@@ -1,8 +1,8 @@
 package com.bethanie.quizApp.ui.login_signup.signUp
 
-import android.util.Log
-import android.util.Patterns
 import androidx.lifecycle.viewModelScope
+import com.bethanie.quizApp.R
+import com.bethanie.quizApp.core.di.ResourceProvider
 import com.bethanie.quizApp.core.utils.ValidationUtil
 import com.bethanie.quizApp.data.model.User
 import com.bethanie.quizApp.data.model.ValidationField
@@ -12,7 +12,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SignUpViewModel @Inject constructor() : BaseViewModel() {
+class SignUpViewModel @Inject constructor(
+    private val resourceProvider: ResourceProvider
+) : BaseViewModel() {
 
     fun createNewUser(
         name: String,
@@ -22,30 +24,13 @@ class SignUpViewModel @Inject constructor() : BaseViewModel() {
         password: String,
         confirmPassword: String
     ) {
-        Log.d(
-            "debugging",
-            "SignUpViewModel \nname: $name, email:$email, userId:$userId, role:$role, password:$password, confirmPassword:$confirmPassword"
-        )
-        val errorMsg = ValidationUtil.validateRegex(
-            ValidationField(name, "^[a-zA-Z]{2,20}( [a-zA-Z]{2,20})?\$", "Enter a valid name"),
-            ValidationField(
-                email, "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                        "\\@" +
-                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                        "(" +
-                        "\\." +
-                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                        ")+", "Enter a valid email"
-            ),
-            ValidationField(password, "[a-zA-Z0-9#\$%]{3,20}\$", "Enter a valid password"),
-            ValidationField(userId, "^[TS]\\d{5}$", "Enter your valid college ID")
-        )
+        val errorMsg = errorMsg(name, email, userId, password)
 
         if (errorMsg == null) {
             viewModelScope.launch {
                 errorHandler {
                     checkInputIfEmpty(name, email, userId, role, password, confirmPassword)
-                    authService.createUseWithEmailAndPassword(email, password) //return t or f
+                    authService.createUseWithEmailAndPassword(email, password)
                 }?.let {
                     userRepo.createUser(
                         User(
@@ -56,7 +41,6 @@ class SignUpViewModel @Inject constructor() : BaseViewModel() {
                         )
                     )
                     user.value = userRepo.getUser()
-                    Log.d("debugging", "user.value: ${user.value}")
                     success.emit(Unit)
                 }
             }
@@ -67,4 +51,33 @@ class SignUpViewModel @Inject constructor() : BaseViewModel() {
         }
     }
 
+    private fun errorMsg(name: String, email: String, userId: String, password: String): String? {
+        val errorMsg = ValidationUtil.validateRegex(
+            ValidationField(
+                name,
+                "^[a-zA-Z]{2,20}( [a-zA-Z]{2,20})?\$",
+                resourceProvider.getString(R.string.validName)
+            ),
+            ValidationField(
+                email, "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                        "\\@" +
+                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                        "(" +
+                        "\\." +
+                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                        ")+", "Enter a valid email"
+            ),
+            ValidationField(
+                password,
+                "[a-zA-Z0-9#\$%]{3,20}\$",
+                resourceProvider.getString(R.string.validPassword)
+            ),
+            ValidationField(
+                userId,
+                "^[TS]\\d{5}$",
+                resourceProvider.getString(R.string.validCollegeID)
+            )
+        )
+        return errorMsg
+    }
 }

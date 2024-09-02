@@ -1,6 +1,5 @@
 package com.bethanie.quizApp.ui.login_signup.signUp
 
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -9,7 +8,6 @@ import com.bethanie.quizApp.R
 import com.bethanie.quizApp.core.Constants
 import com.bethanie.quizApp.databinding.FragmentSignUpBinding
 import com.bethanie.quizApp.ui.base.BaseFragment
-import com.bethanie.quizApp.ui.login_signup.login.LoginFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -36,12 +34,8 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
                 val confirmPassword = etConfirmPassword.text.toString()
 
                 if (password != confirmPassword) {
-                    showSnackBar(view, "Password and Confirm Password must match", true)
+                    showSnackBar(view, getString(R.string.passwordsMatch), true)
                 } else {
-                    Log.d(
-                        "debugging",
-                        "SignUpFragment \nname: $name, email:$email, userId:$userId, role:$role, password:$password, confirmPassword:$confirmPassword"
-                    )
                     viewModel.createNewUser(
                         name = name,
                         email = email,
@@ -62,24 +56,23 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
                 val userRole = viewModel.user.value?.role
                 val userName = viewModel.user.value?.name
 
-                Log.d("debugging", "SignUpFragment -> userRole: $userRole")
 
                 when (userRole) {
                     Constants.TEACHER -> {
                         findNavController().navigate(
                             SignUpFragmentDirections.signUpToTeacherHome()
                         )
-                        showSnackBar(view, "Welcome, Teacher $userName", false)
+                        showSnackBar(view, getString(R.string.welcomeTeacher, userName), false)
                     }
 
                     Constants.STUDENT -> {
                         findNavController().navigate(
                             SignUpFragmentDirections.signUpToStudentHome()
                         )
-                        showSnackBar(view, "Welcome, $userName", false)
+                        showSnackBar(view, getString(R.string.welcomeStudent, userName), false)
                     }
 
-                    else -> showSnackBar(view, "No roles found in this account", true)
+                    else -> showSnackBar(view, getString(R.string.noRolesFound), true)
                 }
             }
         }

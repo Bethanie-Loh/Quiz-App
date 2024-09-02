@@ -19,7 +19,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
     override fun getLayoutResource() = R.layout.fragment_login
 
-
     override fun onBindView(view: View) {
         super.onBindView(view)
 
@@ -54,25 +53,25 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             viewModel.success.collect {
                 val userName = viewModel.user.value?.name
                 val userRole = viewModel.user.value?.role
+                navigateToRespectiveHomes(userRole!!, userName!!, view)
 
-                when (userRole) {
-                    Constants.TEACHER -> {
-                        findNavController().navigate(
-                            LoginFragmentDirections.loginToTeacherHome()
-                        )
-                        showSnackBar(view, "Welcome back, Teacher $userName", false)
-                    }
-
-                    Constants.STUDENT -> {
-                        findNavController().navigate(
-                            LoginFragmentDirections.loginToStudentHome()
-                        )
-                        showSnackBar(view, "Welcome back, $userName", false)
-                    }
-
-                    else -> showSnackBar(view, "No roles found in this account", true)
-                }
             }
+        }
+    }
+
+    private fun navigateToRespectiveHomes(userRole: String, userName: String, view: View) {
+        when (userRole) {
+            Constants.TEACHER -> {
+                findNavController().navigate(LoginFragmentDirections.loginToTeacherHome())
+                showSnackBar(view, getString(R.string.welcomeBackTeacher, userName), false)
+            }
+
+            Constants.STUDENT -> {
+                findNavController().navigate(LoginFragmentDirections.loginToStudentHome())
+                showSnackBar(view, getString(R.string.welcomeBackStudent, userName), false)
+            }
+
+            else -> showSnackBar(view, getString(R.string.noRolesFound), true)
         }
     }
 }

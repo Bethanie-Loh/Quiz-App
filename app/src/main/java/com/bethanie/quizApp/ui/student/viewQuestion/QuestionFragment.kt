@@ -1,8 +1,6 @@
 package com.bethanie.quizApp.ui.student.viewQuestion
 
-import android.app.AlertDialog
 import android.os.CountDownTimer
-import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
@@ -218,7 +216,7 @@ class QuestionFragment : BaseFragment<FragmentQuestionBinding>() {
         super.onPause()
         if (!isQuizCompleted) {
             view?.let {
-                showSnackBar(it, "You had ended the quiz suddenly. Your results are not saved", true)
+                showSnackBar(it, getString(R.string.suddenEndQuiz), true)
             }
             findNavController().navigate(R.id.studentHomeFragment)
         }

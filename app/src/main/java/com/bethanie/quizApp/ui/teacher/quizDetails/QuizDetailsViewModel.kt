@@ -49,7 +49,6 @@ class QuizDetailsViewModel @Inject constructor(
     }
 
     private fun updateStudentsWhoAttemptedQuiz(quiz: Quiz) {
-
         val formatter = DateTimeFormatter.ofPattern("dd MMM yyyy, HH:mm:ss")
 
         val latestStudents = quiz.students

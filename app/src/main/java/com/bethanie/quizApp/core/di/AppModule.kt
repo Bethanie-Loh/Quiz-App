@@ -1,9 +1,11 @@
 package com.bethanie.quizApp.core.di
 
+import android.content.Context
 import com.bethanie.quizApp.core.service.AuthService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -14,4 +16,10 @@ class AppModule {
     @Provides
     @Singleton
     fun provideAuthService(): AuthService = AuthService()
+
+    @Provides
+    @Singleton
+    fun provideResourceProvider(@ApplicationContext context: Context): ResourceProvider {
+        return ResourceProvider(context)
+    }
 }

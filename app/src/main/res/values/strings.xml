@@ -54,4 +54,17 @@
     <string name="viewMistakes">View Your Mistakes</string>
     <string name="comfort">Do not give up! \n💪Practice makes perfect!💪</string>
     <string name="congrats">Congrats for getting full score! \n🥳Keep up the good job!🎉</string>
+    <string name="selectCSVFile">Select a CSV file</string>
+    <string name="installFileManager">Please install a file manager</string>
+    <string name="quizAddedSuccessfully">Quiz added successfully!</string>
+    <string name="welcomeBackTeacher">Welcome back, Teacher %1$s</string>
+    <string name="welcomeTeacher">Welcome, Teacher %1$s</string>
+    <string name="welcomeBackStudent">Welcome back, %1$s</string>
+    <string name="welcomeStudent">Welcome back, %1$s</string>
+    <string name="noRolesFound">No roles found in this account</string>
+    <string name="passwordsMatch">Password and Confirm Password must match</string>
+    <string name="validName">Enter a valid name</string>
+    <string name="validPassword">Enter a valid password</string>
+    <string name="validCollegeID">Enter your valid college ID</string>
+    <string name="suddenEndQuiz">You had ended the quiz suddenly. Your results are not saved</string>
 </resources>

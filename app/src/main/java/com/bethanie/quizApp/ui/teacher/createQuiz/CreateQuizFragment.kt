@@ -71,9 +71,12 @@ class CreateQuizFragment : BaseFragment<FragmentCreateQuizBinding>() {
         intent.type = "text/*"
         intent.addCategory(Intent.CATEGORY_OPENABLE)
         try {
-            startActivityForResult(Intent.createChooser(intent, "Select a CSV file"), 100)
+            startActivityForResult(
+                Intent.createChooser(intent, getString(R.string.selectCSVFile)),
+                100
+            )
         } catch (e: Exception) {
-            showSnackBar(view, "Please install a file manager", true)
+            showSnackBar(view, getString(R.string.installFileManager), true)
         }
     }
 
@@ -102,7 +105,6 @@ class CreateQuizFragment : BaseFragment<FragmentCreateQuizBinding>() {
         binding?.autoCompleteTextView?.setAdapter(arrayAdapter)
         binding?.autoCompleteTextView?.setOnItemClickListener { _, _, position, _ ->
             quizSubject = subjects[position]
-            Log.d("CreateQuizFragment", "Selected Subject: $quizSubject") // For debugging
         }
     }
 
@@ -114,7 +116,7 @@ class CreateQuizFragment : BaseFragment<FragmentCreateQuizBinding>() {
                     findNavController().navigate(
                         CreateQuizFragmentDirections.createQuizToTeacherHome()
                     )
-                    showSnackBar(view, "Quiz added successfully!")
+                    showSnackBar(view, getString(R.string.quizAddedSuccessfully))
                 }
             }
         }
