@@ -45,7 +45,7 @@
                 android:layout_marginVertical="@dimen/twenty_four_dp"
                 android:background="@drawable/input_box"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:padding="@dimen/sixteen_dp"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -69,35 +69,9 @@
                 android:layout_marginBottom="@dimen/twenty_four_dp"
                 android:background="@drawable/input_box"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:hint="Student Id/ Staff Id"
+                android:hint="@string/student_id_staff_id"
                 android:padding="@dimen/sixteen_dp"
                 android:textSize="@dimen/eighteen_sp" />
-
-            <!--            <RelativeLayout-->
-            <!--                android:id="@+id/llcbs"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_below="@+id/etEmail"-->
-            <!--                android:layout_marginVertical="@dimen/ten_dp"-->
-            <!--                android:paddingHorizontal="@dimen/twenty_dp">-->
-
-            <!--                <com.google.android.material.checkbox.MaterialCheckBox-->
-            <!--                    android:id="@+id/cbStudent"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:fontFamily="@font/bold_redhatdisplay"-->
-            <!--                    android:text="Student"-->
-            <!--                    android:textSize="@dimen/eighteen_sp" />-->
-
-            <!--                <com.google.android.material.checkbox.MaterialCheckBox-->
-            <!--                    android:id="@+id/cbTeacher"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_alignParentRight="true"-->
-            <!--                    android:fontFamily="@font/bold_redhatdisplay"-->
-            <!--                    android:text="Teacher"-->
-            <!--                    android:textSize="@dimen/eighteen_sp" />-->
-            <!--            </RelativeLayout>-->
 
             <EditText
                 android:id="@+id/etPassword"
@@ -119,7 +93,7 @@
                 android:layout_below="@+id/etPassword"
                 android:background="@drawable/input_box"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:hint="Confirm Password"
+                android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 android:padding="@dimen/sixteen_dp"
                 android:textSize="@dimen/eighteen_sp" />

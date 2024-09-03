@@ -27,7 +27,7 @@
                 android:layout_marginBottom="@dimen/twenty_five_dp"
                 android:fontFamily="@font/mediumitalic_redhatdisplay"
                 android:gravity="center"
-                android:text="Those who forget history are doomed to repeat it 😌 ~ George Santayana"
+                android:text="@string/those_who_forget_history_are_doomed_to_repeat_it_george_santayana"
                 android:textColor="@color/black"
                 android:textSize="@dimen/seventeen_sp" />
 
@@ -35,7 +35,6 @@
                 android:id="@+id/rvMistakes"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:layout_below="@id/tvGeorge"
                 android:layout_marginTop="@dimen/twenty_dp" />
         </LinearLayout>
 
@@ -48,7 +47,7 @@
             android:layout_marginBottom="@dimen/ten_dp"
             android:fontFamily="@font/bold_redhatdisplay"
             android:minWidth="180dp"
-            android:text="Return Home"
+            android:text="@string/return_home"
             android:textColor="@color/black"
             android:textSize="@dimen/eighteen_sp"
             app:backgroundTint="@color/green"

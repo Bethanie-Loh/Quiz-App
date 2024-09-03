@@ -29,7 +29,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/ten_dp"
             android:fontFamily="@font/bold_redhatdisplay"
-            android:text="LOGIN"
+            android:text="@string/login"
             android:textColor="@color/black"
             android:textSize="@dimen/forty_sp" />
 
@@ -75,7 +75,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/bold_redhatdisplay"
                 android:minWidth="180dp"
-                android:text="LOGIN"
+                android:text="@string/login"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp"
                 app:backgroundTint="@color/coral"
@@ -90,7 +90,7 @@
                 android:layout_marginTop="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
                 android:gravity="center"
-                android:text="Sign Up"
+                android:text="@string/sign_upp"
                 android:textSize="@dimen/eighteen_sp" />
         </RelativeLayout>
     </RelativeLayout>

@@ -36,7 +36,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:fontFamily="@font/bold_redhatdisplay"
-            android:text="Home"
+            android:text="@string/home"
             android:textColor="@color/black"
             android:textSize="@dimen/twenty_two_sp" />
 

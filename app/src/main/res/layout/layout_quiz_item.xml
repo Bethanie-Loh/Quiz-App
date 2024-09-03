@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/five_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="History"
+                android:text="@string/history"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -36,7 +36,7 @@
                 android:layout_marginEnd="@dimen/five_dp"
                 android:layout_toStartOf="@id/ibCopy"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Copy Quiz ID"
+                android:text="@string/copy_quiz_id"
                 android:textSize="@dimen/ten_sp" />
 
             <ImageButton

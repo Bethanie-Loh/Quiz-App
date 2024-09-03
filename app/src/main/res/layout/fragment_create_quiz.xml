@@ -25,7 +25,7 @@
                 android:layout_marginTop="@dimen/sixteen_dp"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Your Random Quiz ID: "
+                android:text="@string/your_random_quiz_id"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -49,7 +49,7 @@
                 android:layout_marginTop="@dimen/thirty_dp"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Step 1: Import CSV"
+                android:text="@string/step_1_import_csv"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -60,7 +60,7 @@
                 android:fontFamily="@font/bold_redhatdisplay"
                 android:minWidth="220dp"
                 android:padding="@dimen/ten_dp"
-                android:text="Import CSV"
+                android:text="@string/import_csv"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp"
                 app:backgroundTint="@color/green"
@@ -77,7 +77,7 @@
                 android:layout_marginTop="@dimen/thirty_dp"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Step 2: Enter Quiz Title"
+                android:text="@string/step_2_enter_quiz_title"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_box"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:hint="Quiz Title"
+                android:hint="@string/quiz_titlee"
                 android:padding="@dimen/sixteen_dp"
                 android:textColorHint="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
@@ -99,7 +99,7 @@
                 android:layout_marginTop="@dimen/thirty_dp"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Step 3: Select Subject"
+                android:text="@string/step_3_select_subject"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -116,7 +116,7 @@
                     android:fontFamily="@font/bold_redhatdisplay"
                     android:inputType="none"
                     android:padding="@dimen/sixteen_dp"
-                    android:text="Quiz Subject"
+                    android:text="@string/quiz_subjectt"
                     android:textSize="@dimen/eighteen_sp" />
             </com.google.android.material.textfield.TextInputLayout>
 

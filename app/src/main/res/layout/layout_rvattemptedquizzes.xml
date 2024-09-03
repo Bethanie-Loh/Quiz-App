@@ -31,7 +31,7 @@
                 android:fontFamily="@font/bold_redhatdisplay"
                 android:inputType="none"
                 android:padding="@dimen/zero_dp"
-                android:text="Filter"
+                android:text="@string/filter"
                 android:textSize="@dimen/twelve_sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,7 +48,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/mediumitalic_redhatdisplay"
             android:gravity="center"
-            android:text="Your have not attempted any quizzes yet. \nGet a quiz Id from your teacher today!"
+            android:text="@string/your_have_not_attempted_any_quizzes_yet_nget_a_quiz_id_from_your_teacher_today"
             android:textSize="@dimen/fourteen_sp" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

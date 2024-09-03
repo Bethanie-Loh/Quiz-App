@@ -28,7 +28,7 @@
                 android:layout_marginVertical="@dimen/forty_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
                 android:minWidth="150dp"
-                android:text="Create A Quiz"
+                android:text="@string/create_a_quiz"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp"
                 app:backgroundTint="@color/green"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/bold_redhatdisplay"
-                    android:text="New Quizzes"
+                    android:text="@string/new_quizzes"
                     android:textColor="@color/black"
                     android:textSize="@dimen/twenty_sp" />
 
@@ -67,7 +67,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/mediumitalic_redhatdisplay"
                     android:gravity="center"
-                    android:text="No new quizzes yet. \nStart create a quiz now!"
+                    android:text="@string/no_new_quizzes_yet_nstart_create_a_quiz_now"
                     android:textSize="@dimen/fourteen_sp" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>

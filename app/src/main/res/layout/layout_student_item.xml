@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/five_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="English"
+                android:text="@string/english"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/tvFirst"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="(You)"
+                android:text="@string/you"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -44,7 +44,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/five_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Score: 16/20"
+                android:text="@string/score_16_20"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 

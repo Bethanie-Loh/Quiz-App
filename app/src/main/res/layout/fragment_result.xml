@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="You got..."
+                android:text="@string/you_got"
                 android:textColor="@color/black"
                 android:textSize="@dimen/twenty_four_sp" />
 
@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="16/20"
+                android:text="@string/_16_20"
                 android:textColor="@color/coral"
                 android:textSize="@dimen/fifty_five_sp" />
         </LinearLayout>
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Ranks"
+                android:text="@string/ranks"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Quiz Title: "
+                android:text="@string/quiz_titlee"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Subject: "
+                android:text="@string/subject"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Teacher Name: "
+                android:text="@string/teacher_name"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/ten_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Time used: "
+                android:text="@string/time_used"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Date attempted: "
+                android:text="@string/date_attempted"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp" />
         </LinearLayout>
@@ -133,7 +133,7 @@
             android:layout_marginVertical="@dimen/ten_dp"
             android:fontFamily="@font/bold_redhatdisplay"
             android:minWidth="180dp"
-            android:text="Return Home"
+            android:text="@string/return_home"
             android:textColor="@color/black"
             android:textSize="@dimen/eighteen_sp"
             app:backgroundTint="@color/green"

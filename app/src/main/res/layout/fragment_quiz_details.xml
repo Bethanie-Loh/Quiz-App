@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Quiz Title: "
+                android:text="@string/quiz_titlee"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Quiz Subject: "
+                android:text="@string/quiz_subjectt"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Quiz Id: "
+                android:text="@string/quiz_id"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Total questions: "
+                android:text="@string/total_questions"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Total time: "
+                android:text="@string/total_time"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Date Created: "
+                android:text="@string/date_created"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/twelve_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
-                android:text="Status: "
+                android:text="@string/status"
                 android:textColor="@color/black"
                 android:textSize="@dimen/eighteen_sp" />
 

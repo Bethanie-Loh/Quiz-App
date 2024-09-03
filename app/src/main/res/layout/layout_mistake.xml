@@ -18,7 +18,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/five_dp"
         android:fontFamily="@font/mediumitalic_redhatdisplay"
-        android:text="You did not answer this question...😞"
+        android:text="@string/you_did_not_answer_this_question"
         android:textColor="@color/rose"
         android:textSize="@dimen/fourteen_sp" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/twenty_dp"
         android:fontFamily="@font/bold_redhatdisplay"
-        android:text="12. The cytoskeleton is important because"
+        android:text="@string/quesTitle"
         android:textColor="@color/black"
         android:textSize="@dimen/eighteen_sp" />
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold_redhatdisplay"
         android:padding="@dimen/twelve_dp"
-        android:text="A. It gives the cell its shape"
+        android:text="@string/quesChoice"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/eighteen_sp"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold_redhatdisplay"
         android:padding="@dimen/twelve_dp"
-        android:text="A. It gives the cell its shape"
+        android:text="@string/quesChoice"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/eighteen_sp"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold_redhatdisplay"
         android:padding="@dimen/twelve_dp"
-        android:text="A. It gives the cell its shape"
+        android:text="@string/quesChoice"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/eighteen_sp"
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold_redhatdisplay"
         android:padding="@dimen/twelve_dp"
-        android:text="A. It gives the cell its shape"
+        android:text="@string/quesChoice"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/eighteen_sp"

@@ -22,7 +22,7 @@
                 android:layout_marginBottom="@dimen/eighteen_dp"
                 android:fontFamily="@font/bold_redhatdisplay"
                 android:gravity="center"
-                android:text="Are you sure to logout?"
+                android:text="@string/are_you_sure_to_logout"
                 android:textColor="@color/black"
                 android:textSize="@dimen/twenty_two_sp"
                 android:textStyle="bold" />
@@ -41,7 +41,7 @@
                     android:layout_marginEnd="@dimen/thirty_dp"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/bold_redhatdisplay"
-                    android:text="Cancel"
+                    android:text="@string/cancel"
                     android:textColor="@color/black"
                     android:textSize="@dimen/eighteen_sp"
                     app:cornerRadius="@dimen/ten_dp" />
@@ -53,7 +53,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="@color/beige"
                     android:fontFamily="@font/bold_redhatdisplay"
-                    android:text="Logout"
+                    android:text="@string/logout"
                     android:textColor="@color/black"
                     android:textSize="@dimen/eighteen_sp"
                     app:cornerRadius="@dimen/ten_dp" />
