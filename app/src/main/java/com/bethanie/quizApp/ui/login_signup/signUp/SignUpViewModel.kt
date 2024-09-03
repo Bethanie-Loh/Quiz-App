@@ -65,7 +65,7 @@ class SignUpViewModel @Inject constructor(
                         "(" +
                         "\\." +
                         "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                        ")+", "Enter a valid email"
+                        ")+", resourceProvider.getString(R.string.validEmail)
             ),
             ValidationField(
                 password,

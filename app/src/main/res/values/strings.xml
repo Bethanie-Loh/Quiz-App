@@ -64,6 +64,7 @@
     <string name="noRolesFound">No roles found in this account</string>
     <string name="passwordsMatch">Password and Confirm Password must match</string>
     <string name="validName">Enter a valid name</string>
+    <string name="validEmail">Enter a valid email</string>
     <string name="validPassword">Enter a valid password</string>
     <string name="validCollegeID">Enter your valid college ID</string>
     <string name="suddenEndQuiz">You had ended the quiz suddenly. Your results are not saved</string>
