@@ -1,80 +1,26 @@
 {
   "project_info": {
-    "project_number": "937466415852",
-    "firebase_url": "https://mob21firebase-5b4c4-default-rtdb.firebaseio.com",
-    "project_id": "mob21firebase-5b4c4",
-    "storage_bucket": "mob21firebase-5b4c4.appspot.com"
+    "project_number": "1050557342955",
+    "project_id": "quiz-app-255d3",
+    "storage_bucket": "quiz-app-255d3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:937466415852:android:76b4b03534c1650bd933c9",
+        "mobilesdk_app_id": "1:1050557342955:android:04672ca4ed5b75870ccaae",
         "android_client_info": {
-          "package_name": "com.bethanie.mob21firebase"
+          "package_name": "com.bethanie.quiz_app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAJjYbj1NBSG0uJB_E1bznGVG-SoequixU"
+          "current_key": "AIzaSyCUvoPD3pKMJNKnM9nmO3AOaHJIAj0S7HA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "937466415852-le6pnb8ttu3fq5q3s1rjbt5lfkqjp8q2.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:937466415852:android:3fc17d3c360cd181d933c9",
-        "android_client_info": {
-          "package_name": "com.bethanie.mob23notification"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAJjYbj1NBSG0uJB_E1bznGVG-SoequixU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "937466415852-le6pnb8ttu3fq5q3s1rjbt5lfkqjp8q2.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:937466415852:android:7f0e375831b3503cd933c9",
-        "android_client_info": {
-          "package_name": "com.bethanie.quizApp"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAJjYbj1NBSG0uJB_E1bznGVG-SoequixU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "937466415852-le6pnb8ttu3fq5q3s1rjbt5lfkqjp8q2.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

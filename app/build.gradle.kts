@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.bethanie.quizApp"
+    namespace = "com.bethanie.quiz_app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.bethanie.quizApp"
+        applicationId = "com.bethanie.quiz_app"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -72,6 +72,7 @@ dependencies {
 
     //Apache CSV Library
     implementation("org.apache.commons:commons-csv:1.11.0")
+
 }
 
 kapt {

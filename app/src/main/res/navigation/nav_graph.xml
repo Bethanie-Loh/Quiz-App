@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.bethanie.quizApp.ui.login_signup.login.LoginFragment"
+        android:name="com.bethanie.quiz_app.ui.login_signup.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.bethanie.quizApp.ui.login_signup.signUp.SignUpFragment"
+        android:name="com.bethanie.quiz_app.ui.login_signup.signUp.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
         <action
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/teacherHomeFragment"
-        android:name="com.bethanie.quizApp.ui.teacher.teacherHome.TeacherHomeFragment"
+        android:name="com.bethanie.quiz_app.ui.teacher.teacherHome.TeacherHomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_teacher_home">
         <action
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/createQuizFragment"
-        android:name="com.bethanie.quizApp.ui.teacher.createQuiz.CreateQuizFragment"
+        android:name="com.bethanie.quiz_app.ui.teacher.createQuiz.CreateQuizFragment"
         android:label="CreateQuizFragment"
         tools:layout="@layout/fragment_create_quiz">
         <action
@@ -59,7 +59,7 @@
 
     <fragment
         android:id="@+id/studentHomeFragment"
-        android:name="com.bethanie.quizApp.ui.student.studentHome.StudentHomeFragment"
+        android:name="com.bethanie.quiz_app.ui.student.studentHome.StudentHomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_student_home">
         <action
@@ -72,7 +72,7 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.bethanie.quizApp.ui.student.result.ResultFragment"
+        android:name="com.bethanie.quiz_app.ui.student.result.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result">
         <action
@@ -91,7 +91,7 @@
 
     <fragment
         android:id="@+id/viewQuizFragment"
-        android:name="com.bethanie.quizApp.ui.student.viewQuestion.QuestionFragment"
+        android:name="com.bethanie.quiz_app.ui.student.viewQuestion.QuestionFragment"
         android:label="fragment_view_quiz"
         tools:layout="@layout/fragment_question">
         <action
@@ -103,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/quizDetailsFragment"
-        android:name="com.bethanie.quizApp.ui.teacher.quizDetails.QuizDetailsFragment"
+        android:name="com.bethanie.quiz_app.ui.teacher.quizDetails.QuizDetailsFragment"
         android:label="fragment_quiz_details"
         tools:layout="@layout/fragment_quiz_details">
         <argument
@@ -112,7 +112,7 @@
     </fragment>
     <fragment
         android:id="@+id/mistakesFragment"
-        android:name="com.bethanie.quizApp.ui.student.result.MistakesFragment"
+        android:name="com.bethanie.quiz_app.ui.student.result.MistakesFragment"
         android:label="MistakesFragment">
         <argument
             android:name="quizId"
